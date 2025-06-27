@@ -39,7 +39,7 @@ mod back_of_house {
     }
 }
 
-use crate::front_of_house::hosting;
+use self::front_of_house::hosting;
 
 pub fn eat_at_restaurant() {
     let mut meal = back_of_house::Breakfast::summer("Rye");
@@ -55,6 +55,11 @@ pub fn eat_at_restaurant() {
     hosting::add_to_waitlist();
 }
 
+use std::collections::HashMap;
+
 fn main() {
+    let mut map = HashMap::new();
+    map.insert(1, 2);
+
     eat_at_restaurant();
 }

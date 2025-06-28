@@ -59,6 +59,15 @@ use std::collections::HashMap;
 
 use rand::Rng;
 
+// use std::{io, cmp::Ordering};
+
+/* 
+use std::io;
+use std::io::Write;
+
+use std::io::{self, Write};
+*/
+
 fn main() {
     let random_number = rand::thread_rng().gen_range(1..101);
     println!("Random number: {}", random_number);

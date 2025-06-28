@@ -1,20 +1,20 @@
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
-        fn seat_at_table() {}
+        fn _seat_at_table() {}
     }
 
     mod serving {
-        fn take_order() {}
-        fn serve_order() {}
-        fn take_payment() {}
+        fn _take_order() {}
+        fn _serve_order() {}
+        fn _take_payment() {}
 
-        fn fix_incorrect_order() {
-            cook_order();
-            serve_order();
+        fn _fix_incorrect_order() {
+            _cook_order();
+            _serve_order();
         }
 
-        fn cook_order() {}
+        fn _cook_order() {}
     }
 }
 
@@ -47,8 +47,8 @@ pub fn eat_at_restaurant() {
     println!("I'd like {} toast please", meal.toast);
     // meal.seasonal_fruit = String::from("blueberries"); // won't compile
 
-    let order1 = back_of_house::Appetizer::Soup;
-    let order2 = back_of_house::Appetizer::Salad;
+    let _order1 = back_of_house::Appetizer::Soup;
+    let _order2 = back_of_house::Appetizer::Salad;
 
     hosting::add_to_waitlist();
     hosting::add_to_waitlist();
@@ -57,7 +57,12 @@ pub fn eat_at_restaurant() {
 
 use std::collections::HashMap;
 
+use rand::Rng;
+
 fn main() {
+    let random_number = rand::thread_rng().gen_range(1..101);
+    println!("Random number: {}", random_number);
+
     let mut map = HashMap::new();
     map.insert(1, 2);
 
